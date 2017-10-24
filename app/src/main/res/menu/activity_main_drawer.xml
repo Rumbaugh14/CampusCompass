@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Behrend Maps"/>
+
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Classes"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Homework"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Weekly Schedual"/>
+
+    </group>
+
+</menu>
