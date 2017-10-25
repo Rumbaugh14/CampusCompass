@@ -42,12 +42,7 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
         </activity>
-        <activity
-            android:name=".Calendar"
-            android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".AddCourses">
+        <activity android:name=".BuildingView">
         </activity>
     </application>
 

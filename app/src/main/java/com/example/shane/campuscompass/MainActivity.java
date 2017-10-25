@@ -17,10 +17,13 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+     ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //set the fragment initially
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);                //On start up go the maps
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -81,15 +84,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_classes) {
+
+            AddCoursesFragment addCoursesFragment = new AddCoursesFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.mainLayout, addCoursesFragment).commit();
         }
 
-        else if (id == R.id.nav_gallery) {
+        else if (id == R.id.nav_homework) {
 
         }
 
-        else if (id == R.id.nav_slideshow) {
+        else if (id == R.id.nav_weeklySchedual) {
 
         }
 

@@ -1,0 +1,228 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.example.shane.campuscompass.AddCoursesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<LinearLayout
+    android:layout_width="584dp"
+    android:layout_height="807dp"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="11dp">
+
+    <LinearLayout
+        android:id="@+id/Course_Name"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Course Name "
+            android:textAlignment="center"
+            tools:textAlignment="center"
+            tools:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Location"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight="0.22">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="171dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Location "
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="-486dp"
+            tools:layout_editor_absoluteY="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DoW"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.27">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:text="Select Days "
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Monday"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Tuesday"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Wednesday"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Thursday"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Friday"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TimeSet"
+        android:layout_width="match_parent"
+        android:layout_height="353dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.41">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/startTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Start Time "
+                    android:textSize="18sp"/>
+
+                <TimePicker
+                    android:id="@+id/startTimeTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:amPmBackgroundColor="@android:color/holo_green_dark"
+                    android:amPmTextColor="@android:color/holo_green_dark"
+                    android:headerBackground="@android:color/holo_green_dark"
+                    android:numbersBackgroundColor="@color/colorAccent"
+                    android:numbersInnerTextColor="?android:attr/colorForeground"
+                    android:numbersSelectorColor="@color/common_google_signin_btn_text_dark_disabled"
+                    android:numbersTextColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/endTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/endTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="End Time "
+                    android:textSize="18sp"/>
+
+                <TimePicker
+                    android:id="@+id/endTimeTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:amPmBackgroundColor="@android:color/holo_red_dark"
+                    android:amPmTextColor="@android:color/holo_red_dark"
+                    android:headerBackground="@color/colorPrimary"
+                    android:numbersBackgroundColor="@color/colorAccent"
+                    android:numbersInnerTextColor="@android:color/holo_red_dark"
+                    android:numbersSelectorColor="@color/common_google_signin_btn_text_dark_disabled"
+                    android:numbersTextColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/addCourseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
