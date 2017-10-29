@@ -11,9 +11,9 @@
     <LinearLayout
         android:layout_width="584dp"
         android:layout_height="807dp"
-        android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        android:orientation="vertical">
 
         <fragment
             android:id="@+id/map1"
@@ -27,7 +27,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="93dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
