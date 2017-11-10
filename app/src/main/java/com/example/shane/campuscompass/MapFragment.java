@@ -54,14 +54,23 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         map = googleMap;
 
         LatLng behrend = new LatLng(42.117509,-79.9808142);
-        bounds = new LatLngBounds(new LatLng(42, -79), new LatLng(43, -80));
+        LatLng dobbins = new LatLng(42.118145,-79.982581);
+        LatLng lawrence = new LatLng(42.118554,-79.981666);
+        LatLng porcupine = new LatLng(42.117798,-79.983391);
+        LatLng tigress = new LatLng(42.117489,-79.983692);
+        LatLng tiffany = new LatLng(42.117176,-79.983461);
+        LatLng almy = new LatLng(42.116354,-79.983783);
+        LatLng ohio = new LatLng(42.116527,-79.984620);
+        LatLng apartments = new LatLng(42.117046,-79.982073);
+        LatLng burke = new LatLng(42.118774,-79.980085);
+
+        bounds = new LatLngBounds(new LatLng(42.114480, -79.9888863), new LatLng(42.123015, -79.977174));
         map.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 0));
 
         MarkerOptions option = new MarkerOptions();
         option.position(behrend).title("Behrend");
         map.addMarker(option);
         map.moveCamera(CameraUpdateFactory.newLatLng(behrend));
-
 
     }
 }
