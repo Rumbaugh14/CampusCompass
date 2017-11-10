@@ -13,6 +13,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     GoogleMap map;
+    LatLngBounds bounds;
 
     public MapFragment() {
         // Required empty public constructor
@@ -51,12 +53,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
 
-        LatLng pp = new LatLng(42.117509,-79.9808142);
+        LatLng behrend = new LatLng(42.117509,-79.9808142);
+        bounds = new LatLngBounds(new LatLng(42, -79), new LatLng(43, -80));
+        map.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 0));
 
         MarkerOptions option = new MarkerOptions();
-        option.position(pp).title("Behrend");
+        option.position(behrend).title("Behrend");
         map.addMarker(option);
-        map.moveCamera(CameraUpdateFactory.newLatLng(pp));
+        map.moveCamera(CameraUpdateFactory.newLatLng(behrend));
 
 
     }
