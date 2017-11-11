@@ -3,30 +3,32 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             tools:context="com.example.shane.campuscompass.AddCoursesFragment">
+                                             tools:context="com.example.shane.campuscompass.AddCoursesLayout">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
         android:weightSum="1"
-        android:layout_margin="4dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
         <LinearLayout
             android:id="@+id/Course_Name"
@@ -40,21 +42,21 @@
                 style="@android:style/Widget.DeviceDefault.Light.TextView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:clickable="false"
-                android:gravity="center_vertical|center_horizontal"
                 android:layout_gravity="left"
-                android:text="Course Name "
                 android:layout_marginLeft="4dp"
                 android:layout_weight="1"
+                android:clickable="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Course Name "
                 android:textAlignment="center"
                 tools:textAlignment="center"
                 tools:textSize="18sp"/>
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/CourseNameTextView"
                 android:layout_width="0dp"
-                android:layout_gravity="right"
                 android:layout_height="match_parent"
+                android:layout_gravity="right"
                 android:layout_weight="3"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -81,7 +83,7 @@
                 tools:layout_editor_absoluteY="8dp"/>
 
             <Spinner
-                android:id="@+id/spinner2"
+                android:id="@+id/LocationSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
@@ -103,12 +105,12 @@
                 >
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/SlectDays_TextView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="5"
                     android:gravity="center_vertical"
                     android:text="Select Days "
-                    android:layout_weight="5"
                     android:textSize="18sp"/>
 
                 <LinearLayout
@@ -118,35 +120,35 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/checkBox6"
+                        android:id="@+id/Monday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Monday"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/Tuesday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Tuesday"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/Wednesday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Wednesday"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox3"
+                        android:id="@+id/Thursday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Thursday"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox2"
+                        android:id="@+id/Friday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -173,20 +175,20 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/startTimeTextView"
+                        android:id="@+id/Start_TextView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="10"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="Start Time "
-                        android:layout_weight="10"
                         android:textSize="18sp"/>
 
                     <TimePicker
-                        android:id="@+id/startTimeTimePicker"
+                        android:id="@+id/Start_TTP"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -204,11 +206,11 @@
                     android:id="@+id/endTime"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/endTimeTextView"
+                        android:id="@+id/End_TextView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="10"
@@ -217,7 +219,7 @@
                         android:textSize="18sp"/>
 
                     <TimePicker
-                        android:id="@+id/endTimeTimePicker"
+                        android:id="@+id/End_TTP"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -240,7 +242,7 @@
             android:weightSum="1">
 
             <Button
-                android:id="@+id/addCourseButton"
+                android:id="@+id/AddCourseButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add"/>
