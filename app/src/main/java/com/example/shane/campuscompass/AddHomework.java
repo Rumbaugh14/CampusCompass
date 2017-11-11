@@ -1,10 +1,10 @@
 package com.example.shane.campuscompass;
 
-import android.app.Fragment;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +33,8 @@ public class AddHomework extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View v = inflater.inflate(R.layout.add_homework, container, false);
+
+
         editCourse = (EditText) v.findViewById(R.id.courseField);
         editAssignment = (EditText) v.findViewById(R.id.assignmentField);
         editDueDate = (EditText) v.findViewById(R.id.dueDateField);
