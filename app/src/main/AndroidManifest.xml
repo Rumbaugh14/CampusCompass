@@ -42,8 +42,10 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
         </activity>
-        <activity android:name=".BuildingView">
-        </activity>
+
+
+        <activity android:name=".AddCoursesLayout"></activity>
+
     </application>
 
 </manifest>

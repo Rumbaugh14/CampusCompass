@@ -1,12 +1,9 @@
 package com.example.shane.campuscompass;
 
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -15,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class AddCoursesFragment extends AppCompatActivity {
+public class AddCoursesLayout extends AppCompatActivity {
 
     private TextView courseName;
     private Spinner location;
@@ -28,7 +25,7 @@ public class AddCoursesFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_add_courses);
+        setContentView(R.layout.fragment_add_course_layout);
 
 
         courseName = (TextView)findViewById(R.id.CourseNameTextView);

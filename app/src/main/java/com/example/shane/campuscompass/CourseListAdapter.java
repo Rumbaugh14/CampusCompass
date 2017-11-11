@@ -6,10 +6,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.shane.campuscompass.R;
-
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 /**
@@ -19,23 +15,23 @@ import java.util.List;
 public class CourseListAdapter extends BaseAdapter{
 
     private Context mContext;
-    private List<Courses> mCoursesList;
+    private List<Course> mCourseList;
 
     //Constructor
 
-    public CourseListAdapter(Context context, List<Courses> coursesList) {
+    public CourseListAdapter(Context context, List<Course> courseList) {
         mContext = context;
-        mCoursesList = coursesList;
+        mCourseList = courseList;
     }
 
     @Override
     public int getCount() {
-        return mCoursesList.size();
+        return mCourseList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mCoursesList.get(position);
+        return mCourseList.get(position);
     }
 
     @Override
@@ -53,13 +49,13 @@ public class CourseListAdapter extends BaseAdapter{
         TextView courseTime = (TextView)v.findViewById(R.id.course_list_time);
 
         //set text for TextViews
-        courseName.setText(mCoursesList.get(position).getName());
-        courseLocation.setText(mCoursesList.get(position).getLocation());
-        courseDoW.setText(mCoursesList.get(position).getdow());
-        courseTime.setText(String.valueOf(mCoursesList.get(position).getTime()));
+        courseName.setText(mCourseList.get(position).getName());
+        courseLocation.setText(mCourseList.get(position).getLocation());
+        courseDoW.setText(mCourseList.get(position).getdow());
+        courseTime.setText(String.valueOf(mCourseList.get(position).getTime()));
 
         //save course id to tag
-        v.setTag(mCoursesList.get(position).getId());
+        v.setTag(mCourseList.get(position).getId());
 
         return v;
     }
