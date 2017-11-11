@@ -52,7 +52,10 @@ public class AddCoursesMain extends ListFragment{
         mCoursesList.add(new Courses(2,"CAS 100A", "Kockle", 230, "Tuesday"));
         mCoursesList.add(new Courses(3,"EE 310", "Burke", 900, "Wed"));
         mCoursesList.add(new Courses(4,"SLEEP", "Burke", 1000, "Friday"));
-
+        mCoursesList.add(new Courses(1,"SWENG 411", "Burke", 123, "Monday"));
+        mCoursesList.add(new Courses(2,"CAS 100A", "Kockle", 230, "Tuesday"));
+        mCoursesList.add(new Courses(3,"EE 310", "Burke", 900, "Wed"));
+        mCoursesList.add(new Courses(4,"SLEEP", "Burke", 1000, "F"));
 
         //init adapter
 
