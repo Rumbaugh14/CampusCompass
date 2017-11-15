@@ -4,7 +4,7 @@ package com.example.shane.campuscompass;
  * Created by Shane on 10/29/2017.
  */
 
-public class Courses {
+public class Course {
     private int id;
     private String name;
     private String location;
@@ -13,7 +13,7 @@ public class Courses {
 
     //Constructor
 
-    public Courses(int id, String name, String location, int time, String dow) {
+    public Course(int id, String name, String location, int time, String dow) {
         this.id = id;
         this.name = name;
         this.location = location;

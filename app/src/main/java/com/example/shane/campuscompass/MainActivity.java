@@ -81,15 +81,13 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_classes) {
 
-            AddCoursesFragment addCoursesFragment = new AddCoursesFragment();
+            AddCoursesMain addCoursesMain = new AddCoursesMain();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.mainLayout, addCoursesFragment).commit();
+            manager.beginTransaction().replace(R.id.mainLayout, addCoursesMain).commit();
         }
 
         else if (id == R.id.nav_homework) {
-           AddCoursesMain addCoursesMain = new AddCoursesMain();
-            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.mainLayout, addCoursesMain).commit();
+
         }
 
         else if (id == R.id.nav_weeklySchedual) {
