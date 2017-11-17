@@ -10,7 +10,7 @@ import android.util.Log;
 /**
  * Created by Zach on 11/10/2017.
  */
-
+//Comment to send to GIT
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DatabaseHelper";
