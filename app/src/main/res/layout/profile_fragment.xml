@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    tools:context=".ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="38dp"
+            android:text="@string/profile_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/nameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/profile_editButton"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nameText"
+            android:layout_alignEnd="@+id/nameEdit"
+            android:layout_alignRight="@+id/nameEdit"
+            android:layout_alignTop="@+id/nameText"
+            android:text="@string/profile_userName"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/majorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_major"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/userMajor"
+            android:layout_alignRight="@+id/nameText"
+            android:layout_alignEnd="@+id/nameText" />
+
+        <TextView
+            android:id="@+id/userMajor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_userMajor"
+            android:textSize="15dp"
+            android:layout_below="@+id/emailText"
+            android:layout_alignLeft="@+id/userName"
+            android:layout_alignStart="@+id/userName"
+            android:layout_marginTop="62dp" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nameText"
+            android:layout_marginTop="58dp"
+            android:text="@string/profile_email"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/userName"
+            android:layout_alignRight="@+id/userName"
+            android:layout_alignTop="@+id/emailText"
+            android:text="@string/profile_userEmail"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

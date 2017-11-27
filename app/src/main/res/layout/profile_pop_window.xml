@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/profile_userName"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/majorField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameField"
+        android:layout_alignStart="@+id/nameField"
+        android:layout_below="@+id/nameField"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/profile_userMajor" />
+
+    <TextView
+        android:id="@+id/nameText_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/majorField"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/nameField"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:text="@string/profile_name"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/majorText_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nameText_pop"
+        android:layout_alignRight="@+id/nameText_pop"
+        android:layout_alignTop="@+id/majorField"
+        android:text="@string/profile_major"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/emailText_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/emailField"
+        android:layout_alignLeft="@+id/nameText_pop"
+        android:layout_alignStart="@+id/nameText_pop"
+        android:layout_alignTop="@+id/emailField"
+        android:text="@string/profile_email"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/majorField"
+        android:layout_alignStart="@+id/majorField"
+        android:layout_below="@+id/majorField"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/profile_userEmail" />
+
+    <Button
+        android:id="@+id/saveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/profile_save"
+        android:textColor="@android:color/background_light" />
+</RelativeLayout>
