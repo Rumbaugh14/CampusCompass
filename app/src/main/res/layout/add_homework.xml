@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.shane.campuscompass.AddHomework">
+
 
     <Button
         android:id="@+id/addButton"
@@ -50,11 +51,12 @@
         android:id="@+id/courseField"
         android:layout_width="353dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="35dp" />
+        tools:layout_editor_absoluteY="32dp"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -73,12 +75,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="16dp"
         android:text="Due Date"
         app:layout_constraintBottom_toTopOf="@+id/dueDateField"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assignmentField" />
+        app:layout_constraintTop_toBottomOf="@+id/assignmentField"
+        app:layout_constraintVertical_bias="1.0"/>
 
     <EditText
         android:id="@+id/dueDateField"
@@ -87,7 +91,8 @@
         android:layout_marginLeft="16dp"
         android:ems="10"
         android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="205dp" />
+        tools:layout_editor_absoluteY="205dp"/>
 
 </android.support.constraint.ConstraintLayout>

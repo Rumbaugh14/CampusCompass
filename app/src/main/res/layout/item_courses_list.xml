@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical"
+              android:paddingBottom="5dp"
               android:paddingLeft="10dp"
               android:paddingRight="10dp"
-              android:paddingBottom="5dp"
-              android:background="#ffffff"
               android:paddingTop="5dp"
-              >
+    >
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/course_list_name"
-    android:text="Name"
-    android:textSize="20dp"/>
-
-    <TextView
+        android:id="@+id/course_list_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20dp"/>
+
+    <TextView
         android:id="@+id/course_list_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Burke"
         android:textSize="20dp"/>
 
     <TextView
+        android:id="@+id/course_list_dow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/course_list_dow"
         android:text="Monday"
         android:textSize="20dp"/>
 
     <TextView
+        android:id="@+id/course_list_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/course_list_time"
         android:text="1:25"
         android:textSize="20dp"/>
 

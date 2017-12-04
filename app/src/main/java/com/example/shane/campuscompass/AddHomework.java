@@ -21,7 +21,7 @@ public class AddHomework extends Fragment {
 
     private static final String TAG = "AddHomework";
 
-    DatabaseHelper hwDB;
+    private  DatabaseHelper hwDB;
     private Button btnAdd, btnViewData;
     private EditText editCourse, editAssignment, editDueDate;
 
@@ -34,17 +34,17 @@ public class AddHomework extends Fragment {
         super.onCreate(savedInstanceState);
         View v = inflater.inflate(R.layout.add_homework, container, false);
 
-
-        editCourse = (EditText) v.findViewById(R.id.courseField);
-        editAssignment = (EditText) v.findViewById(R.id.assignmentField);
-        editDueDate = (EditText) v.findViewById(R.id.dueDateField);
-        btnAdd = (Button) v.findViewById(R.id.addButton);
-        btnViewData = (Button) v.findViewById(R.id.viewButton);
+/*
+        editCourse =  v.findViewById(R.id.courseField);
+        editAssignment =  v.findViewById(R.id.assignmentField);
+        editDueDate =  v.findViewById(R.id.dueDateField);
+        btnAdd =  v.findViewById(R.id.addButton);
+        btnViewData =  v.findViewById(R.id.viewButton);
         hwDB = new DatabaseHelper(getActivity());
 
-        AddData();
-        ViewData();
-
+       AddData();
+       ViewData();
+*/
         return v;
     }
 
