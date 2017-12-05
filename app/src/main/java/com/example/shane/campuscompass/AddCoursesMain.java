@@ -1,5 +1,6 @@
 package com.example.shane.campuscompass;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,10 +18,12 @@ import java.util.List;
 
 public class AddCoursesMain extends ListFragment{
 
-    private ListView lvCourse;
-    private CourseListAdapter adapter;
-    private List<Course> mCourseList;
+    private static ListView lvCourse;
+    private static List<Course> mCourseList = new ArrayList<>();
+    private static CourseListAdapter adapter;
     private FloatingActionButton mFaB;
+    //private Context currentContext = getContext();
+    //= new CourseListAdapter(getContext(), mCourseList)
 
 
     public AddCoursesMain() {
@@ -40,6 +43,14 @@ public class AddCoursesMain extends ListFragment{
         return v;
     }
 
+
+    public static void AddCourse(Course c){
+        mCourseList.add(c);
+
+        //adapter = new CourseListAdapter(currentContext, mCourseList);
+        //lvCourse.setAdapter(adapter);
+    }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -47,17 +58,17 @@ public class AddCoursesMain extends ListFragment{
         //add data to list
 
         //this is a list of courses entered in manually ....
-        mCourseList = new ArrayList<>();
+        //mCourseList = new ArrayList<>();
 
-        mCourseList.add(new Course(1,"SWENG 411", "Burke", 123, "Monday"));
-        mCourseList.add(new Course(2,"CAS 100A", "Kockle", 230, "Tuesday"));
-        mCourseList.add(new Course(3,"EE 310", "Burke", 900, "Wed"));
-        mCourseList.add(new Course(4,"SLEEP", "Burke", 1000, "Friday"));
+        //mCourseList.add(new Course(1,"SWENG 411", "Burke", 123, "Monday"));
+        //mCourseList.add(new Course(2,"CAS 100A", "Kockle", 230, "Tuesday"));
+        //mCourseList.add(new Course(3,"EE 310", "Burke", 900, "Wed"));
+        //mCourseList.add(new Course(4,"SLEEP", "Burke", 1000, "Friday"));
 
-        mCourseList.add(new Course(1,"SWENG 411", "Burke", 123, "Monday"));
-        mCourseList.add(new Course(2,"CAS 100A", "Kockle", 230, "Tuesday"));
-        mCourseList.add(new Course(3,"EE 310", "Burke", 900, "Wed"));
-        mCourseList.add(new Course(4,"SLEEP", "Burke", 1000, "F"));
+        //mCourseList.add(new Course(1,"SWENG 411", "Burke", 123, "Monday"));
+        //mCourseList.add(new Course(2,"CAS 100A", "Kockle", 230, "Tuesday"));
+        //mCourseList.add(new Course(3,"EE 310", "Burke", 900, "Wed"));
+        //mCourseList.add(new Course(4,"SLEEP", "Burke", 1000, "F"));
 
 
 
@@ -71,8 +82,8 @@ public class AddCoursesMain extends ListFragment{
 
         //init adapter
 
-        adapter = new CourseListAdapter(getContext(), mCourseList);
-        lvCourse.setAdapter(adapter);
+        //adapter = new CourseListAdapter(getContext(), mCourseList);
+        //lvCourse.setAdapter(adapter);
 
         lvCourse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

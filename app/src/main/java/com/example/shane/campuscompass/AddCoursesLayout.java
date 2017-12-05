@@ -15,6 +15,7 @@ import java.util.List;
 
 public class AddCoursesLayout extends AppCompatActivity {
 
+    public static int num = 0;
     private TextView courseName;
     private Spinner location;
     private List<CheckBox> mCheckBoxes = new ArrayList<>();
@@ -48,6 +49,13 @@ public class AddCoursesLayout extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
+                //String name = courseName.getText().toString();
+                String day = "Mon";
+                String loc = "Burke";
+                int t = 100;
+                num++;
+                Course currentClass = new Course(num, courseName.getText().toString(), loc, t, day);
+                AddCoursesMain.AddCourse(currentClass);
                 finish();
             }
         });

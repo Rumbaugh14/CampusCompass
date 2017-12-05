@@ -124,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Monday"
+                        android:text="MON"
                         android:textSize="10sp"/>
 
                     <CheckBox
@@ -132,15 +132,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Tuesday"
+                        android:text="TUES"
                         android:textSize="10sp"/>
 
                     <CheckBox
                         android:id="@+id/Wednesday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Wednesday"
+                        android:layout_weight="1.05"
+                        android:text="WED"
                         android:textSize="9sp"/>
 
                     <CheckBox
@@ -148,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Thursday"
+                        android:text="THURS"
                         android:textSize="10sp"/>
 
                     <CheckBox
@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Friday"
+                        android:text="FRI"
                         android:textSize="10sp"/>
 
                 </LinearLayout>
