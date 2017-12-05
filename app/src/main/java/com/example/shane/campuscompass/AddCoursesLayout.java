@@ -2,6 +2,7 @@ package com.example.shane.campuscompass;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
@@ -44,6 +45,12 @@ public class AddCoursesLayout extends AppCompatActivity {
         addButton = (Button)findViewById(R.id.AddCourseButton);
 
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                finish();
+            }
+        });
 
     }
 
