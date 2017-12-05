@@ -104,6 +104,12 @@ public class MainActivity extends AppCompatActivity
             manager.beginTransaction().replace(R.id.mainLayout, mapFragment).commit();
         }
 
+        else if (id == R.id.nav_profile) {
+            ProfileFragment profileFragment = new ProfileFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.mainLayout, profileFragment).commit();
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

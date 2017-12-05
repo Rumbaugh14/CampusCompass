@@ -7,6 +7,15 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="profile_editButton">Edit</string>
+    <string name="profile_name">Name:</string>
+    <string name="profile_userName">Your Name</string>
+    <string name="profile_major">Major:</string>
+    <string name="profile_userMajor">Your Major</string>
+    <string name="profile_email">Email:</string>
+    <string name="profile_userEmail">Your E-Mail</string>
+    <string name="profile_save">Save</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_calendar">Calendar</string>
