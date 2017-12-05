@@ -20,7 +20,7 @@ public class AddCoursesMain extends ListFragment{
 
     private static ListView lvCourse;
     private static List<Course> mCourseList = new ArrayList<>();
-    private static CourseListAdapter adapter;
+    private CourseListAdapter adapter = new CourseListAdapter(getContext(), mCourseList);
     private FloatingActionButton mFaB;
     //private Context currentContext = getContext();
     //= new CourseListAdapter(getContext(), mCourseList)
@@ -44,11 +44,11 @@ public class AddCoursesMain extends ListFragment{
     }
 
 
-    public static void AddCourse(Course c){
+    public void AddCourse(Course c){
         mCourseList.add(c);
 
-        //adapter = new CourseListAdapter(currentContext, mCourseList);
-        //lvCourse.setAdapter(adapter);
+        adapter = new CourseListAdapter(getContext(), mCourseList);
+        lvCourse.setAdapter(adapter);
     }
 
     @Override
