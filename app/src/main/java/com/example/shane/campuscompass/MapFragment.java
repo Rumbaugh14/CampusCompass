@@ -83,11 +83,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
         map = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         googleMap.setBuildingsEnabled(true);
-        googleMap.setMinZoomPreference(6.0f);
-        googleMap.setMaxZoomPreference(14.0f);
+        googleMap.setMinZoomPreference(15.0f);
+        googleMap.setMaxZoomPreference(20.0f);
 
         map.addMarker(new MarkerOptions().position(behrend).title("Marker at Behrend"));
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(behrend, 6.0f));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(behrend, 20.0f));
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -98,19 +98,67 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
 
         if (sSelected.equals("Burke")) {
             map.addMarker(new MarkerOptions().position(burke).title("Marker at Burke"));
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(burke, 6.0f));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(burke, 20.0f));
         }
         if (sSelected.equals("Library")) {
             map.addMarker(new MarkerOptions().position(library).title("Marker at Lily Library"));
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(library, 6.0f));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(library, 20.0f));
         }
         if (sSelected.equals("OBS")) {
             map.addMarker(new MarkerOptions().position(obs).title("Marker at OBS"));
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(obs, 6.0f));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(obs, 20.0f));
         }
         if (sSelected.equals("Almy")) {
             map.addMarker(new MarkerOptions().position(almy).title("Marker at Almy"));
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(almy, 6.0f));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(almy, 20.0f));
+        }
+        if (sSelected.equals("Junker Center")) {
+            map.addMarker(new MarkerOptions().position(junker).title("Marker at Almy"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(junker, 20.0f));
+        }
+        if (sSelected.equals("Reed Building")) {
+            map.addMarker(new MarkerOptions().position(reed).title("Marker at Reed Building"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(reed, 20.0f));
+        }
+        if (sSelected.equals("Kochel")) {
+            map.addMarker(new MarkerOptions().position(kochel).title("Marker at Kochel"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(kochel, 20.0f));
+        }
+        if (sSelected.equals("Admissions Building")) {
+            map.addMarker(new MarkerOptions().position(admissions).title("Marker at Admissions Building"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(admissions, 20.0f));
+        }
+        if (sSelected.equals("Nick Building")) {
+            map.addMarker(new MarkerOptions().position(nick).title("Marker at Nick Building"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(nick, 20.0f));
+        }
+        if (sSelected.equals("Wit Building")) {
+            map.addMarker(new MarkerOptions().position(wit).title("Marker at Wit Building"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(wit, 20.0f));
+        }
+        if (sSelected.equals("Hammermill")) {
+            map.addMarker(new MarkerOptions().position(hammermill).title("Marker at Hammermill"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(hammermill, 20.0f));
+        }
+        if (sSelected.equals("Perry Hall")) {
+            map.addMarker(new MarkerOptions().position(perry).title("Marker at Perry Hall"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(perry, 20.0f));
+        }
+        if (sSelected.equals("Senat Hall")) {
+            map.addMarker(new MarkerOptions().position(senat).title("Marker at Senat Hall"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(senat, 20.0f));
+        }
+        if (sSelected.equals("Niagara Hall")) {
+            map.addMarker(new MarkerOptions().position(niagara).title("Marker at Niagara Hall"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(niagara, 20.0f));
+        }
+        if (sSelected.equals("Tennis Courts")) {
+            map.addMarker(new MarkerOptions().position(tennis).title("Marker at Tennis Courts"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(tennis, 20.0f));
+        }
+        if (sSelected.equals("Wellness Center")) {
+            map.addMarker(new MarkerOptions().position(wellness).title("Marker at Wellness Center"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(wellness, 20.0f));
         }
     }
 
