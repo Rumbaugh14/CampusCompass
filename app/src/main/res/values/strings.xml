@@ -20,6 +20,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_add_courses">AddCourses</string>
+    <string-array name ="locations">
+        <item>Burke</item>
+        <item>Library</item>
+        <item>OBS</item>
+        <item>Almy</item>
+    </string-array>
+
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
