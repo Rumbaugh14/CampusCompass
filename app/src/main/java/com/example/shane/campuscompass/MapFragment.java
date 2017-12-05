@@ -6,6 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -17,6 +22,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     GoogleMap map;
+    Spinner spinner;
+    ArrayAdapter<CharSequence> adapter;
 
     public MapFragment() {
         // Required empty public constructor
@@ -24,10 +31,26 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_map, container, false);
 
         SupportMapFragment mapFragment = (SupportMapFragment)getFragmentManager().findFragmentById(R.id.map1);
         //mapFragment.getMapAsync(this);
+
+        spinner = (Spinner)v.findViewById(R.id.spinner_map);
+        //adapter = ArrayAdapter.createFromResource(this, R.array.locations, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        //spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        //        Toast.makeText(getBaseContext(), parent.getItemAtPosition(position)+" selected", Toast.LENGTH_LONG).show();
+        //    }
+
+         //   public void onNothingSelected(AdapterView<?>) {
+
+         //   }
+        //});
 
         return v;
     }
@@ -36,6 +59,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         super.onViewCreated(view, savedInstanceState);
         SupportMapFragment mapFragment = (SupportMapFragment)getChildFragmentManager().findFragmentById(R.id.map1);
         mapFragment.getMapAsync(this);
+
+
     }
 
     @Override

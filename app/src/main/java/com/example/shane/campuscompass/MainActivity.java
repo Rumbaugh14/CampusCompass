@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        else if (id == R.id.nav_weeklySchedual) {
+        else if (id == R.id.nav_weeklySchedual) { //Schedule
             AddHomework addHomework = new AddHomework();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.mainLayout, addHomework).commit();
