@@ -8,56 +8,89 @@
     android:orientation="vertical"
     >
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/mapLocationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Location:"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".9"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight=".80"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="0dp">
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:map="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/map1"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.example.shane.campuscompass.MapsActivity" />
+                  xmlns:map="http://schemas.android.com/apk/res-auto"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:id="@+id/map1"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  tools:context="com.example.shane.campuscompass.MapsActivity"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="101dp"
-        android:layout_weight=".20"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/map_class"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="Art 168"
-            android:textSize="18sp" />
+            android:layout_weight=".5"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/map_loc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="OBS"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/map_loc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="OBS"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/map_class"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Art 168"
+                android:textSize="18sp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/map_starts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight=".5"
             android:gravity="center_vertical"
             android:text="Starts In: 00Hr 12Min"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
