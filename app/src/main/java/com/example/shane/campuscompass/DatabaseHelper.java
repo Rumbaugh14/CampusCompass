@@ -32,6 +32,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTable);
     }
 
+    public void delete() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String delete = "DELETE * FROM "+TABLE_NAME;
+        db.execSQL(delete);
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         String upgrade = "DROP IF TABLE EXISTS "  + TABLE_NAME;

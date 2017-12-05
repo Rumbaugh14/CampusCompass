@@ -39,7 +39,7 @@ public class CreateHomework extends Fragment {
                 String newEntry1 = editCourse.getText().toString();
                 String newEntry2 = editAssignment.getText().toString();
                 String newEntry3 = editDueDate.getText().toString();
-                if(editCourse.length() != 0 || editAssignment.length() != 0 || editDueDate.length() != 0)
+                if(editCourse.length() != 0 && editAssignment.length() != 0 && editDueDate.length() != 0)
                 {
                     AddData(newEntry1, newEntry2, newEntry3, v);
                 } else {
@@ -51,11 +51,8 @@ public class CreateHomework extends Fragment {
         btnViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new HomeworkList();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.list, fragment ); // give your fragment container id in first parameter
-                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-                transaction.commit();
+                Intent intent = new Intent(getActivity(), HomeworkListActivity.class);
+                startActivity(intent);
             }
         });
         return v;
