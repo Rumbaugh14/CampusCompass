@@ -1,5 +1,6 @@
 package com.example.shane.campuscompass;
 
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -43,8 +44,7 @@ public class ProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View v = inflater.inflate(R.layout.profile_fragment, container, false);
 
-
-        editButton = (Button) v.findViewById(R.id.nameEdit);
+        editButton = (Button) v.findViewById(R.id.editButton);
         profileName = (TextView)v.findViewById(R.id.userName);
         profileMajor = (TextView)v.findViewById(R.id.userMajor);
         profileEmail = (TextView)v.findViewById(R.id.userEmail);
@@ -66,16 +66,27 @@ public class ProfileFragment extends Fragment {
     public void profilePopup(View anchorView) {
         View popupView = getLayoutInflater().inflate(R.layout.profile_pop_window, null);
 
-        profilePopup = new PopupWindow(popupView, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        profilePopup = new PopupWindow(popupView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
         saveButton = (Button) popupView.findViewById(R.id.saveChanges);
         editName = (EditText) popupView.findViewById(R.id.nameField);
         editMajor = (EditText) popupView.findViewById(R.id.majorField);
         editEmail = (EditText) popupView.findViewById(R.id.emailField);
 
-
         profilePopup.setFocusable(true);
-        profilePopup.setBackgroundDrawable(new ColorDrawable());
-        profilePopup.showAtLocation(anchorView, Gravity.NO_GRAVITY, 70, 150);
+        profilePopup.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+        profilePopup.showAtLocation(anchorView, Gravity.NO_GRAVITY, 0, 0);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                name = editName.getText().toString();
+                major = editMajor.getText().toString();
+                email = editEmail.getText().toString();
+
+                profileName.setText(name);
+                profileMajor.setText(major);
+                profileEmail.setText(email);
+            }
+        });
     }
 }
