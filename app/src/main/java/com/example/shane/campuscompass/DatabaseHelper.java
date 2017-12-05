@@ -27,14 +27,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "Create TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COL2 +" TEXT, " + COL3 +" TEXT, " + COL4 +" TEXT)";
+        String createTable = "Create TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL2 +" TEXT, " + COL3 +" TEXT, " + COL4 +" TEXT)";
         db.execSQL(createTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        String deleteTable = "DROP IF TABLE EXISTS"  + TABLE_NAME;
-        db.execSQL(deleteTable);
+        String upgrade = "DROP IF TABLE EXISTS "  + TABLE_NAME;
+        db.execSQL(upgrade);
         onCreate(db);
     }
 
@@ -54,7 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Cursor showData() {
+    public Cursor getData() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT " + COL2 + ", " + COL3 + ", " + COL4 + " FROM " + TABLE_NAME, null);
         return data;
