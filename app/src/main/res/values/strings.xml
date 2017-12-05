@@ -22,9 +22,32 @@
     <string name="title_activity_add_courses">AddCourses</string>
     <string-array name ="locations">
         <item>Burke</item>
+        <item>Junker Center</item>
+        <item>Reed Building</item>
+        <item>Kochel</item>
+        <item>Admissions Building</item>
+        <item>Erie Hall</item>
+        <item>Nick Building</item>
+        <item>Wit Building</item>
+        <item>Hammermill</item>
+        <item>Perry Hall</item>
+        <item>Senat Hall</item>
+        <item>Niagara Hall</item>
+        <item>Tennis Courts</item>
+        <item>Wellness Center</item>
         <item>Library</item>
         <item>OBS</item>
-        <item>Almy</item>
+        <item>dobbins</item>
+        <item>lawrence</item>
+        <item>porcupine</item>
+        <item>tigress</item>
+        <item>tiffany</item>
+        <item>ohio</item>
+        <item>apartments</item>
+        <item>smithChapel</item>
+        <item>erie</item>
+
+
     </string-array>
 
 

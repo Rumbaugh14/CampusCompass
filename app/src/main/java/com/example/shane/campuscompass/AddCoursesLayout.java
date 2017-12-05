@@ -63,8 +63,8 @@ public class AddCoursesLayout extends AppCompatActivity {
                 num++;
                 Course currentClass = new Course(num, courseName.getText().toString(), loc, t, day);
 
+                // --- Disregard these three following lines ---
                 //mCourseList.add(currentClass);
-
                 //adapter = new CourseListAdapter(getContext(), mCourseList);
                 //lvCourse.setAdapter(adapter);
 

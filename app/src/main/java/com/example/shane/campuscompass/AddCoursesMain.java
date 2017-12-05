@@ -18,8 +18,8 @@ import java.util.List;
 
 public class AddCoursesMain extends ListFragment{
 
-    private static ListView lvCourse;
-    private static List<Course> mCourseList = new ArrayList<>();
+    private ListView lvCourse;
+    private List<Course> mCourseList = new ArrayList<>();
     private CourseListAdapter adapter = new CourseListAdapter(getContext(), mCourseList);
     private FloatingActionButton mFaB;
     //private Context currentContext = getContext();
