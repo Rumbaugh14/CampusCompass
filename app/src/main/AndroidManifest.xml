@@ -45,7 +45,7 @@
 
 
         <activity android:name=".AddCoursesLayout"></activity>
-
+        <activity android:name=".HomeworkListActivity"></activity>
     </application>
 
 </manifest>
