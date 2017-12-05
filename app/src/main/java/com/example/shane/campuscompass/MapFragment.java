@@ -82,30 +82,35 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        googleMap.setBuildingsEnabled(true);
+        googleMap.setMinZoomPreference(6.0f);
+        googleMap.setMaxZoomPreference(14.0f);
 
         map.addMarker(new MarkerOptions().position(behrend).title("Marker at Behrend"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(behrend));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(behrend, 6.0f));
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         String sSelected=parent.getItemAtPosition(pos).toString();
         Toast.makeText(getContext(),sSelected,Toast.LENGTH_SHORT).show();
 
-        if (sSelected == "Burke") {
+        System.out.println(sSelected);
+
+        if (sSelected.equals("Burke")) {
             map.addMarker(new MarkerOptions().position(burke).title("Marker at Burke"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(burke));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(burke, 6.0f));
         }
-        if (sSelected == "Library") {
+        if (sSelected.equals("Library")) {
             map.addMarker(new MarkerOptions().position(library).title("Marker at Lily Library"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(library));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(library, 6.0f));
         }
-        if (sSelected == "OBS") {
+        if (sSelected.equals("OBS")) {
             map.addMarker(new MarkerOptions().position(obs).title("Marker at OBS"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(obs));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(obs, 6.0f));
         }
-        if (sSelected == "Almy") {
+        if (sSelected.equals("Almy")) {
             map.addMarker(new MarkerOptions().position(almy).title("Marker at Almy"));
-            map.moveCamera(CameraUpdateFactory.newLatLng(almy));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(almy, 6.0f));
         }
     }
 
