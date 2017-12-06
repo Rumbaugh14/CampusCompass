@@ -37,16 +37,14 @@
         <item>Wellness Center</item>
         <item>Library</item>
         <item>OBS</item>
-        <item>dobbins</item>
-        <item>lawrence</item>
-        <item>porcupine</item>
-        <item>tigress</item>
-        <item>tiffany</item>
-        <item>ohio</item>
-        <item>apartments</item>
-        <item>smithChapel</item>
-        <item>erie</item>
-
-
+        <item>Dobbins</item>
+        <item>Lawrence</item>
+        <item>Porcupine</item>
+        <item>Tigress</item>
+        <item>Tiffany</item>
+        <item>Ohio</item>
+        <item>Apartments</item>
+        <item>Smith Chapel</item>
+        <item>Erie Hall</item>
     </string-array>
 </resources>
