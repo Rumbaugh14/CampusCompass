@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "Create TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL2 +" TEXT, " + COL3 +" TEXT, " + COL4 +" TEXT)";
         db.execSQL(createTable);
     }
@@ -65,5 +65,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT " + COL2 + ", " + COL3 + ", " + COL4 + " FROM " + TABLE_NAME, null);
         return data;
+    }
+
+    public Cursor getItemID(String course, String dueDate, String assignment)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT " + COL1 + " FROM " + TABLE_NAME +
+                " WHERE " + COL2 + " = '" + course + "' AND " + COL3 + " = '" + assignment + "' AND " + COL4 + " = '" +  dueDate + "'";
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
+
+    public void updateData(String newCourse, String newAssignment, String newDueDate, int id, String oldCourse, String oldAssignment, String oldDueDate)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "UPDATE " + TABLE_NAME + " SET " + COL2 + " = '" + newCourse + "', " + COL3 + " = '" + newAssignment + "', " + COL4 + " = '" + newDueDate +
+                "' WHERE " + COL1 + " = '" + id + "' AND " + COL2 + " = '" + oldCourse + "' AND " + COL3 + " = '" + oldAssignment + "' AND " + COL4 + " = '" + oldDueDate + "'";
+        db.execSQL(query);
+    }
+
+    public void deleteData(int id, String course, String assignment, String dueDate)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE_NAME + " WHERE " + COL1 + " = '" + id + "' AND " + COL2 + " = '" + course + "' AND " +
+                COL3 + " = '" + assignment + "' AND " + COL4 + " = '" + dueDate + "'";
+        db.execSQL(query);
     }
 }
