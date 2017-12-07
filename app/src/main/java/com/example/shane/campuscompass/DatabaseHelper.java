@@ -12,7 +12,7 @@ import android.util.Log;
  */
 //Comment to send to GIT
 public class DatabaseHelper extends SQLiteOpenHelper {
-
+    //Zach
     private static final String TAG = "DatabaseHelper";
 
     private static final String TABLE_NAME = "Homework_Table";
