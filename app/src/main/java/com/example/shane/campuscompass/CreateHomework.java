@@ -45,6 +45,10 @@ public class CreateHomework extends Fragment {
                 } else {
                     toastMessage("One or more fields do not contain data!", v);
                 }
+
+                editCourse.setText("");
+                editAssignment.setText("");
+                editDueDate.setText("");
             }
         });
 

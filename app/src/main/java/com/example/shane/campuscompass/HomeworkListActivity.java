@@ -38,16 +38,32 @@ public class HomeworkListActivity extends AppCompatActivity{
 
     private void populateListView() {
         Cursor data = mDatabaseHelper.getData();
-
-        ArrayList<String> listData = new ArrayList<>();
+        int count = 0;
+        ArrayList<String> classData = new ArrayList<>();
+        ArrayList<String> assignmentData = new ArrayList<>();
+        ArrayList<String> dueDateData = new ArrayList<>();
         while(data.moveToNext())
         {
-            listData.add(data.getString(0));
-            listData.add(data.getString(1));
-            listData.add(data.getString(2));
+            if (count == 0)
+            {
+                classData.add(data.getString(0));
+                assignmentData.add(data.getString(1));
+                dueDateData.add(data.getString(2));
+            }
+            else{
+                if(count == 2)
+                {
+                    count=0;
+                }
+                else
+                {
+                    count++;
+                }
+            }
+
         }
 
-        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
+        ListAdapter adapter = new HomeworkAdapter(this, classData, assignmentData, dueDateData);
         mListView.setAdapter(adapter);
     }
 }

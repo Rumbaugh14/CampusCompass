@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/classText2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:text="Class"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="Due Date:"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="45dp" />
+
+        <TextView
+            android:id="@+id/dueDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:text="DueDate"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="Assignment:"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="90dp" />
+
+        <TextView
+            android:id="@+id/assignmentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:maxLines="4"
+            android:text="Assignment"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="109dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

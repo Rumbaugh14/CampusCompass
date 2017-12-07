@@ -67,7 +67,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
     LatLng ohio = new LatLng(42.116527, -79.984620);
     LatLng apartments = new LatLng(42.117046, -79.982073);
     LatLng burke = new LatLng(42.118774, -79.980085);
-    LatLng smithChapel = new LatLng(42.119842, -79.989786);
+    LatLng smithChapel = new LatLng(42.119834, -79.979775);
     LatLng junker = new LatLng(42.120150, -79.978346);
     LatLng reed = new LatLng(42.119371, -79.983807);
     LatLng kochel = new LatLng(42.120066, -79.982069);
@@ -83,7 +83,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
     LatLng niagara = new LatLng(42.119252, -79.981863);
     LatLng tennis = new LatLng(42.121483, -79.982511);
     LatLng wellness = new LatLng(42.119005, -79.984689);
-
 
     public MapFragment() {
         // Required empty public constructor
@@ -193,34 +192,33 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
               else  if (sSelected.equals("Wellness Center")) {
                     dropPin(wellness,sSelected);
                 }
-       else if (sSelected.equals("tiffany")) {
+       else if (sSelected.equals("Tiffany")) {
             dropPin(tiffany,sSelected);
         }
-      else  if (sSelected.equals("ohio")) {
+      else if (sSelected.equals("Ohio")) {
             dropPin(ohio,sSelected);
         }
-       else if (sSelected.equals("apartments")) {
+       else if (sSelected.equals("Apartments")) {
             dropPin(apartments,sSelected);
         }
-      else  if (sSelected.equals("smithChapel")) {
+      else  if (sSelected.equals("Smith Chapel")) {
             dropPin(smithChapel,sSelected);
         }
-      else  if (sSelected.equals("erie")) {
+      else if (sSelected.equals("Erie Hall")) {
             dropPin(erie,sSelected);
         }
-      else  if (sSelected.equals("tigress")) {
+      else  if (sSelected.equals("Tigress")) {
             dropPin(tigress,sSelected);
         }
-      else  if (sSelected.equals("porcupine")) {
+      else  if (sSelected.equals("Porcupine")) {
             dropPin(porcupine,sSelected);
         }
-      else  if (sSelected.equals("lawrence")) {
+      else  if (sSelected.equals("Lawrence")) {
             dropPin(lawrence,sSelected);
         }
-      else if  (sSelected.equals("dobbins")){
+      else if  (sSelected.equals("Dobbins")){
             dropPin(dobbins,sSelected);
         }
-
     }
 
     public void dropPin(LatLng x, String name){

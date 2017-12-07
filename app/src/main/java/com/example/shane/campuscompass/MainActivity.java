@@ -14,11 +14,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
      ;
+
+     TextView userName;
+     TextView userEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +32,6 @@ public class MainActivity extends AppCompatActivity
         //set the fragment initially
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -87,13 +90,13 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.nav_homework) {
-
-        }
-
-        else if (id == R.id.nav_weeklySchedual) {
             CreateHomework addHomework = new CreateHomework();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.mainLayout, addHomework).commit();
+        }
+
+        else if (id == R.id.nav_weeklySchedual) {
+
         }
 
         else if (id == R.id.nav_maps) {
