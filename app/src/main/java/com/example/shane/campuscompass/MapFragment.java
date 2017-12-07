@@ -55,6 +55,8 @@ import org.json.JSONObject;
 public class MapFragment extends Fragment implements OnMapReadyCallback, AdapterView.OnItemSelectedListener {
 
     GoogleMap map;
+
+
     LatLng behrend = new LatLng(42.117509, -79.9808142);
     LatLng dobbins = new LatLng(42.118145, -79.982581);
     LatLng lawrence = new LatLng(42.118554, -79.981666);
@@ -142,6 +144,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
         String sSelected = parent.getItemAtPosition(pos).toString();
         Toast.makeText(getContext(), sSelected, Toast.LENGTH_SHORT).show();
         System.out.println(sSelected);
+
         if (sSelected.equals("Burke")) {
             dropPin(burke,sSelected);
         }

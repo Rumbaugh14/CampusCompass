@@ -43,16 +43,18 @@ public class CourseListAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_courses_list,null);
 
-        TextView courseName = (TextView)v.findViewById(R.id.course_list_name);
-        TextView courseLocation = (TextView)v.findViewById(R.id.course_list_location);
-        TextView courseDoW = (TextView)v.findViewById(R.id.course_list_dow);
-        TextView courseTime = (TextView)v.findViewById(R.id.course_list_time);
-
+        TextView courseName = v.findViewById(R.id.course_list_name);
+        TextView courseLocation = v.findViewById(R.id.course_list_location);
+        TextView courseDoW = v.findViewById(R.id.course_list_dow);
+        TextView courseTimeStart = v.findViewById(R.id.course_list_timeStart);
+        TextView courseTimeEnd = v.findViewById(R.id.course_list_timeEnd);
         //set text for TextViews
+
         courseName.setText(mCourseList.get(position).getName());
         courseLocation.setText(mCourseList.get(position).getLocation());
         courseDoW.setText(mCourseList.get(position).getdow());
-        courseTime.setText(String.valueOf(mCourseList.get(position).getTime()));
+        courseTimeStart.setText(mCourseList.get(position).getTimeSt());
+        courseTimeEnd.setText((mCourseList.get(position).getTimeEd()));
 
         //save course id to tag
         v.setTag(mCourseList.get(position).getId());

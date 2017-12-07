@@ -8,16 +8,18 @@ public class Course {
     private int id;
     private String name;
     private String location;
-    private int time;
+    private String timeSt;
+    private String timeEd;
     private String dow;
 
     //Constructor
 
-    public Course(int id, String name, String location, int time, String dow) {
+    public Course(int id, String name, String location, String timeS,String timeE, String dow) {
         this.id = id;
         this.name = name;
         this.location = location;
-        this.time = time;
+        this.timeSt = timeS;
+        this.timeEd = timeE;
         this.dow = dow;
     }
 
@@ -54,11 +56,18 @@ public class Course {
         this.location = location;
     }
 
-    public int getTime() {
-        return time;
+    public String getTimeSt() {
+        return timeSt;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setTimeSt(String time) {
+        this.timeSt = time;
+    }
+    public String getTimeEd() {
+        return timeEd;
+    }
+
+    public void setTimeEd(String time) {
+        this.timeEd = time;
     }
 }

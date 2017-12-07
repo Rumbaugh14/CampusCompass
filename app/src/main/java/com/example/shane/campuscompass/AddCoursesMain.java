@@ -2,6 +2,7 @@ package com.example.shane.campuscompass;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -22,10 +23,8 @@ public class AddCoursesMain extends ListFragment{
     private List<Course> mCourseList = new ArrayList<>();
     private CourseListAdapter adapter = new CourseListAdapter(getContext(), mCourseList);
     private FloatingActionButton mFaB;
-    //private Context currentContext = getContext();
-    //= new CourseListAdapter(getContext(), mCourseList)
-
-
+    private CoursesDatabase coursesDatabase;
+    private Cursor data;
     public AddCoursesMain() {
         // Required empty public constructor
     }
@@ -40,16 +39,18 @@ public class AddCoursesMain extends ListFragment{
 
         lvCourse = v.findViewById(android.R.id.list);
         mFaB = v.findViewById(R.id.FaB_AddCourse);
+
+
         return v;
     }
 
 
     public void AddCourse(Course c){
         mCourseList.add(c);
-
         adapter = new CourseListAdapter(getContext(), mCourseList);
         lvCourse.setAdapter(adapter);
     }
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -58,7 +59,10 @@ public class AddCoursesMain extends ListFragment{
         //add data to list
 
         //this is a list of courses entered in manually ....
-        //mCourseList = new ArrayList<>();
+        mCourseList = new ArrayList<>();
+        coursesDatabase = new CoursesDatabase(getContext());
+        data = coursesDatabase.getData();
+
 
         //mCourseList.add(new Course(1,"SWENG 411", "Burke", 123, "Monday"));
         //mCourseList.add(new Course(2,"CAS 100A", "Kockle", 230, "Tuesday"));
@@ -82,8 +86,8 @@ public class AddCoursesMain extends ListFragment{
 
         //init adapter
 
-        //adapter = new CourseListAdapter(getContext(), mCourseList);
-        //lvCourse.setAdapter(adapter);
+        adapter = new CourseListAdapter(getContext(), mCourseList);
+        lvCourse.setAdapter(adapter);
 
         lvCourse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -100,6 +104,13 @@ public class AddCoursesMain extends ListFragment{
                 Intent in = new Intent(getActivity(), AddCoursesLayout.class);
                 startActivity(in);
 
+                if(data.getCount()==0){
+
+                }
+                else{
+                    mCourseList.add(new Course(1, data.getString(1), data.getString(4),
+                            data.getString(2), data.getString(3), data.getString(5)));
+                }
             }
         });
 
