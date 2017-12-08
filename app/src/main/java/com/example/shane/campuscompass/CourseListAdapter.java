@@ -15,23 +15,31 @@ import java.util.List;
 public class CourseListAdapter extends BaseAdapter{
 
     private Context mContext;
-    private List<Course> mCourseList;
+    private List<String> mCourseName;
+    private List<String> mCourseLocation;
+    private List<String> mCourseDow;
+    private List<String> mCourseStartTime;
+    private List<String> mCourseEndTime;
 
-    //Constructor
-
-    public CourseListAdapter(Context context, List<Course> courseList) {
+    public CourseListAdapter(Context context, List<String> courseName,
+                             List<String> courseLocation, List<String> courseDow,
+                             List<String> courseStartTime, List<String> courseEndTime) {
         mContext = context;
-        mCourseList = courseList;
+        mCourseName = courseName;
+        mCourseLocation = courseLocation;
+        mCourseDow = courseDow;
+        mCourseStartTime = courseStartTime;
+        mCourseEndTime = courseEndTime;
     }
 
     @Override
     public int getCount() {
-        return mCourseList.size();
+        return mCourseName.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return mCourseList.get(position);
+        return null;
     }
 
     @Override
@@ -43,22 +51,25 @@ public class CourseListAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_courses_list,null);
 
-        TextView courseName = v.findViewById(R.id.course_list_name);
-        TextView courseLocation = v.findViewById(R.id.course_list_location);
-        TextView courseDoW = v.findViewById(R.id.course_list_dow);
-        TextView courseTimeStart = v.findViewById(R.id.course_list_timeStart);
-        TextView courseTimeEnd = v.findViewById(R.id.course_list_timeEnd);
+        TextView courseName = (TextView) v.findViewById(R.id.course_list_name);
+        TextView courseDoW = (TextView) v.findViewById(R.id.course_list_location);
+        TextView courseLocation = (TextView) v.findViewById(R.id.course_list_dow);
+        TextView courseTimeStart = (TextView) v.findViewById(R.id.course_list_timeStart);
+        TextView courseTimeEnd = (TextView) v.findViewById(R.id.course_list_timeEnd);
         //set text for TextViews
 
-        courseName.setText(mCourseList.get(position).getName());
-        courseLocation.setText(mCourseList.get(position).getLocation());
-        courseDoW.setText(mCourseList.get(position).getdow());
-        courseTimeStart.setText(mCourseList.get(position).getTimeSt());
-        courseTimeEnd.setText((mCourseList.get(position).getTimeEd()));
+        courseName.setText(mCourseName.get(position));
+        courseLocation.setText(mCourseLocation.get(position));
+        courseDoW.setText(mCourseDow.get(position));
+        courseTimeStart.setText(mCourseStartTime.get(position));
+        courseTimeEnd.setText(mCourseEndTime.get(position));
 
-        //save course id to tag
-        v.setTag(mCourseList.get(position).getId());
 
         return v;
     }
-}
+
+
+    //Constructor
+
+    }
+

@@ -115,30 +115,26 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Adapter
 
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-
-
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        map.setMyLocationEnabled(true);
-
-
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        googleMap.setBuildingsEnabled(true);
+
+        if (!(ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
+            map.setMyLocationEnabled(true);
+        }
+
         googleMap.setMinZoomPreference(15.5f);
         googleMap.setMaxZoomPreference(18.0f);
 
         map.addMarker(new MarkerOptions().position(behrend).title("Marker at Behrend"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(behrend, 15.5f));
     }
-
+/*
+    protected void createLocationRequest() {
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+    }
+*/
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         String sSelected = parent.getItemAtPosition(pos).toString();
         Toast.makeText(getContext(), sSelected, Toast.LENGTH_SHORT).show();

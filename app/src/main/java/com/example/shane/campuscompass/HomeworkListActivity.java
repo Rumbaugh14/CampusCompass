@@ -63,7 +63,6 @@ public class HomeworkListActivity extends AppCompatActivity {
         ListAdapter adapter = new HomeworkAdapter(this, classData, assignmentData, dueDateData);
         mListView.setAdapter(adapter);
 
-
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
